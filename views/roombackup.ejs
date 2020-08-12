@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <title>BBXINT | JAMCAM</title>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +32,6 @@
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
     <script src="script.js" defer></script>
     <script src="index.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.0/TweenMax.min.js"></script>
     <style>
       #video-grid {
         display: flex;
@@ -56,47 +54,27 @@
           <div id="video-grid"></div>
         </div>
         <div class="main__controls">
-          <li>
-            <div class="main__controls__block">
-              <div
-                onclick="playStop()"
-                class="main__controls__button main__video_button"
-              >
-                <i class="fas fa-video"></i>
-              </div>
+          <div class="main__controls__block">
+            <div
+              onclick="muteUnmute()"
+              class="main__controls__button main__mute_button"
+            >
+              <i class="fas fa-microphone"></i>
             </div>
-          </li>
-          <li>
-            <div class="main__controls__block">
-              <div
-                onclick="shareScreen()"
-                class="main__controls__button main__video_button"
-              >
-                <i class="fas fa-film"></i>
-              </div>
+          </div>
+          <div class="main__controls__block">
+            <div
+              onclick="playStop()"
+              class="main__controls__button main__video_button"
+            >
+              <i class="fas fa-video"></i>
             </div>
-          </li>
-          <li>
-            <div class="main__controls__block">
-              <div
-                onclick="muteUnmute()"
-                class="main__controls__button main__mute_button"
-              >
-                <i class="fas fa-microphone"></i>
-              </div>
+          </div>
+          <div class="main__controls__block">
+            <div class="main__controls__button">
+              <i class="fas fa-phone-alt fa-rotate-180"></i>
             </div>
-          </li>
-          <li>
-            <div class="main__controls__block">
-              <div
-                href="#room"
-                onclick="close_window()"
-                class="main__controls__button1"
-              >
-                <i class="fas fa-phone-alt fa-rotate-180"></i>
-              </div>
-            </div>
-          </li>
+          </div>
         </div>
       </div>
     </div>
