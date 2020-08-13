@@ -30,6 +30,7 @@
     ></script>
     <script src="/socket.io/socket.io.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
     <script src="script.js" defer></script>
     <script src="index.js" defer></script>
@@ -41,16 +42,18 @@
         flex-wrap: wrap;
       }
       video {
-        height: 400px;
-        width: 400px;
+        height: 450px;
+        width: 700px;
+
         border-radius: 25px;
+        border: solid 2px #4040d0;
         object-fit: cover;
         padding: 8px;
       }
     </style>
   </head>
   <body>
-    <div class="main">
+    <div class="container-fluid1">
       <div class="main__left">
         <div class="main__videos">
           <div id="video-grid"></div>
@@ -69,34 +72,47 @@
           <li>
             <div class="main__controls__block">
               <div
-                onclick="shareScreen()"
-                class="main__controls__button main__video_button"
-              >
-                <i class="fas fa-film"></i>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="main__controls__block">
-              <div
                 onclick="muteUnmute()"
                 class="main__controls__button main__mute_button"
               >
                 <i class="fas fa-microphone"></i>
               </div>
             </div>
-          </li>
+          </lii>
           <li>
             <div class="main__controls__block">
-              <div
-                href="#room"
-                onclick="close_window()"
-                class="main__controls__button1"
-              >
+              <div class="main__controls__button1">
                 <i class="fas fa-phone-alt fa-rotate-180"></i>
               </div>
             </div>
           </li>
+        </div>
+      </div>
+      <div class="floating-chat">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+        <div class="chat">
+          <div class="header">
+            <button>
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+          <ul class="messages">
+            <li class="other">
+              Olalalalalalalalalalalalalala
+            </li>
+            <li class="other">ESH?</li>
+            <li class="self">ESH!</li>
+            <li class="other">Suh Dud</li>
+            <li class="self">!!!!!!</li>
+            <li class="other">!!</li>
+            <li class="self">!!!!!</li>
+            <li class="other">olala</li>
+            <li class="self">bobs and vegana?</li>
+          </ul>
+          <div class="footer">
+            <div class="text-box" contenteditable="true" disabled="true"></div>
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+          </div>
         </div>
       </div>
     </div>

@@ -72,22 +72,6 @@ function addVideoStream(video, stream) {
   videoGrid.append(video);
 }
 
-function shareScreen(video, stream) {
-  navigator.mediaDevices.getDisplayMedia({ cursor: true }).then((stream) => {
-    const screenTrack = stream.getTracks()[0];
-    senders.current
-      .find((sender) => sender.track.kind === "video")
-      .replaceTrack(screenTrack);
-    screenTrack.onended = function () {
-      senders.current;
-      video.addEventListener("loadedmetadata", () => {
-        video.play();
-      });
-      videoGrid.append(video);
-    };
-  });
-}
-
 function close_window() {
   location.replace("http://beatboxinternational.com");
 }
